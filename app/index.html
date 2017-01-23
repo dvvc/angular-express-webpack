@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS + Express template</title>
+  </head>
+  <body ng-app="myApp">
+
+    <div class="container" ng-controller="AppCtrl">
+      <h1>Hello world</h1>
+      <div>
+        {{ testVal }}
+      </div>
+      <div>
+        <input type="number" ng-model="testVal"/>
+        <button class="btn btn-primary">Click me</button>
+        <a href="#!/start">Start</a> <a href="#!/second">Second</a>
+      </div>
+      <div>
+        <button ng-click="ajaxRequest()" class="btn btn-primary">Test Ajax</button>
+        <div class="well">
+          <h3>Message:</h3>
+          <pre>{{message}}</pre>
+          <pre ng-show="error">{{error}}</pre>
+        </div>
+      </div>
+      <ng-view/>
+    </div>
+
+  </body>
+</html>
